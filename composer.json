@@ -1,0 +1,19 @@
+{
+    "name": "unapi/sms-common",
+    "description": "Unapi sms common classes",
+    "keywords": ["unapi", "guzzle", "promise", "sms", "virtual phone"],
+    "type": "library",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload" : {
+        "psr-4": {
+            "unapi\\sms\\common\\": "src"
+        }
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}
