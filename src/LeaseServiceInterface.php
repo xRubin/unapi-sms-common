@@ -7,18 +7,7 @@ use unapi\sms\common\dto\ServicePhoneInterface;
 interface LeaseServiceInterface
 {
     /**
-     * @param string $value
-     * @return $this
-     */
-    public function setCountry(string $value);
-
-    /**
-     * @param string $value
-     * @return $this
-     */
-    public function setService(string $value);
-
-    /**
+     * Запрос на на выделение номера
      * @return PromiseInterface
      */
     public function getPhone(): PromiseInterface;
