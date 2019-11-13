@@ -2,7 +2,7 @@
 namespace unapi\sms\common;
 
 use GuzzleHttp\Promise\PromiseInterface;
-use unapi\sms\common\dto\ServicePhoneDto;
+use unapi\sms\common\dto\ServicePhoneInterface;
 
 interface LeaseServiceInterface
 {
@@ -24,29 +24,29 @@ interface LeaseServiceInterface
     public function getPhone(): PromiseInterface;
 
     /**
-     * @param ServicePhoneDto $servicePhone
+     * @param ServicePhoneInterface $servicePhone
      * @return PromiseInterface
      */
-    public function getSmsMessage(ServicePhoneDto $servicePhone): PromiseInterface;
+    public function getSmsMessage(ServicePhoneInterface $servicePhone): PromiseInterface;
 
     /**
      * Сообщает, что выданный номер уже использован или заблокирован в сервисе для которого запрашивалась активация
-     * @param ServicePhoneDto $servicePhone
+     * @param ServicePhoneInterface $servicePhone
      * @return PromiseInterface
      */
-    public function declinePhone(ServicePhoneDto $servicePhone): PromiseInterface;
+    public function declinePhone(ServicePhoneInterface $servicePhone): PromiseInterface;
 
     /**
      * Сообщает что вы отправили смс на номер и готовы получить код поступивший в этом смс
-     * @param ServicePhoneDto $servicePhone
+     * @param ServicePhoneInterface $servicePhone
      * @return PromiseInterface
      */
-    public function readyPhone(ServicePhoneDto $servicePhone): PromiseInterface;
+    public function readyPhone(ServicePhoneInterface $servicePhone): PromiseInterface;
 
     /**
      * Отправляет уведомление об успешном получении кода и завершает операцию
-     * @param ServicePhoneDto $servicePhone
+     * @param ServicePhoneInterface $servicePhone
      * @return PromiseInterface
      */
-    public function confirmPhone(ServicePhoneDto $servicePhone): PromiseInterface;
+    public function confirmPhone(ServicePhoneInterface $servicePhone): PromiseInterface;
 }
