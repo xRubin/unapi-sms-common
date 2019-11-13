@@ -2,8 +2,9 @@
 namespace unapi\sms\common;
 
 use GuzzleHttp\Promise\PromiseInterface;
+use unapi\sms\common\dto\ServicePhoneDto;
 
-interface SmsServiceInterface
+interface LeaseServiceInterface
 {
     /**
      * @param string $value
